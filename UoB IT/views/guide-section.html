@@ -1,0 +1,10 @@
+<div data-role="view" data-title="Pocket Guide" data-layout="main" data-model="APP.models.guide">
+  <ul data-role="listview" data-style="inset" data-template="guide-section-template" data-bind="source: ds"></ul>
+</div>
+
+<script type="text/x-kendo-tmpl" id="guide-section-template">
+        <div>
+            <h2 class="guide-page-title">#: PageTitle #</h2>
+            <div class="guide-page-content">#= PageContent #</div>
+        </div>
+    </script>

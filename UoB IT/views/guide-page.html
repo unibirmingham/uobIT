@@ -1,0 +1,44 @@
+<script>
+    function rebindGuideListView(e) {
+        var thisID = e.view.params.id;
+        var listView = element.find("#pocketguide-page-listview").data('kendoMobileListView')
+        
+        alert(thisId);
+
+        if (thisID) {
+            ds.fetch(function() {
+                var item = ds.get(thisID);
+                if (item) {
+                    //backButton.show();
+                    navBar.title(item.FullName);
+                    listView.setDataSource(item.children);
+                } else {
+                    // redirect to root
+                    setTimeout(function() {
+                        kendo.mobile.application.navigate('views/guide.html');
+                    }, 0);
+                }
+            });
+        } else {
+            //backButton.hide();
+            //navBar.title('Employees');
+            listView.setDataSource(ds);
+        }
+
+        e.view.scroller.scrollTo(0, 0);
+    }
+    
+</script>
+
+<div data-role="view" data-title="Pocket Guide" data-layout="main" data-model="APP.models.guide" data-show="rebindGuideListView">
+    <p>Page</p>
+  <ul id="pocketguide-page-listview" data-role="listview" data-style="inset" data-template="guide-page-template"></ul>
+</div>
+
+<script type="text/x-kendo-tmpl" id="guide-page-template">
+        <div>
+            <h2 class="guide-page-title">#: PageTitle #</h2>
+            <div class="guide-page-content">#= PageContent #</div>
+        </div>
+</script>
+

@@ -133,84 +133,6 @@ body, html {
     background-repeat: no-repeat;
 }
 
-/* WEATHER STYLES*/
-.weather {
-    padding-top:50px;
-}
-
-.weather .weather-title {
-    color: #fff;
-    font-size: 1.5em;
-    line-height: 1.2em;
-    text-shadow: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-    position: absolute;
-    top: 10px;
-    left: 0;
-    width: 100%;
-}
-
-.weather-info {
-    color: #fff;
-    font-size: 1.2em;
-    text-shadow: none;
-    line-height: 1.8em;
-    display: inline-block;
-}
-
-.weather-info.date {
-    margin-top: 7px;
-}
-
-.weather-info.temperature {
-    margin-left: 5px;
-}
-
-.weather-info.temperature.low {
-    color: rgba(0,0,0,0.5);
-}
-
-/* Weather Icons*/
-.weather-icon {
-    width: 64px;
-    height: 64px;
-    background-image: url(../styles/images/sprite-weather.png);
-    background-repeat: no-repeat;
-    float: right;
-    position: relative;
-    top: -6px;
-    left: -10px;
-}
-
-.weather-icon.sunny {
-    background-position: 0px 0px;
-}
-
-.weather-icon.cloudy {
-    background-position: 0px -64px;
-}
-
-.weather-icon.partly-cloudy {
-    background-position: 0px -128px;
-}
-
-.weather-icon.partly-sunny {
-    background-position: 0px -192px;
-}
-
-.weather-icon.shower {
-    background-position: 0px -256px;
-}
-
-.weather-icon.foggy {
-    background-position: 0px -320px;
-}
-
-.weather-icon.storm {
-    background-position: 0px -384px;
-}
 
 .position-left {
     float: left;
@@ -255,25 +177,6 @@ body, html {
 .km-android .view-content p,
 .km-android .view-content h3 {
     color: #2e5968;
-}
-
-.km-android .weather-info.temperature.low {
-    color: #2e5968;
-}
-
-.km-ios .km-view .weather {
-    background: #5fb4ed; /* Old browsers */
-    background: -moz-linear-gradient(top, #5fb4ed 0%, #0076c5 74%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5fb4ed), color-stop(74%,#0076c5)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #5fb4ed 0%,#0076c5 74%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #5fb4ed 0%,#0076c5 74%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #5fb4ed 0%,#0076c5 74%); /* IE10+ */
-    background: linear-gradient(to bottom, #5fb4ed 0%,#0076c5 74%); /* W3C */
-}
-.km-ios7 .km-view .weather,
-.km-wp .km-view .weather,
-.km-flat .km-view .weather {
-    background: #b0b0b0;
 }
 
 .km-flat .km-list > li {
@@ -355,4 +258,462 @@ body, html {
         background-repeat: no-repeat;
         background-size: 100%;
     }
+}
+
+/* MESSAGES */
+
+div.offlineMessage {
+    display:none;
+}
+
+.message{
+		/*
+		 border: 1px solid;
+		 color: #fff;
+		 padding: 5px;
+		 margin-bottom: 1em;
+    */
+    background-size: 40px 40px;
+		background-image: linear-gradient(135deg, rgba(255, 255, 255, .05) 25%, transparent 25%,
+							transparent 50%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 75%,
+							transparent 75%, transparent);										
+		 box-shadow: inset 0 -1px 0 rgba(255,255,255,.4);
+		 width: 100%;
+		 border: 1px solid;
+		 color: #fff;
+		 padding: 5px;
+		 /*position: fixed;*/
+		 /*_position: absolute;*/
+		 text-shadow: 0 1px 0 rgba(0,0,0,.5);
+		 /*animation: animate-bg 5s linear infinite;*/
+    /*margin-bottom: 1em;*/
+    
+}
+
+.info{
+		 /*background-color: #4ea5cd;*/
+		 border-color: #3b8eb5;
+}
+
+.error{
+		 background-color: #de4343;
+		 border-color: #c43d3d;
+}
+		 
+.warning{
+		 background-color: #eaaf51;
+		 border-color: #d99a36;
+}
+
+.success{
+		 background-color: #61b832;
+		 border-color: #55a12c;
+}
+
+/*.km-root */
+.itemUnavailable,
+.km-android .km-list .itemUnavailable .km-icon {
+    color: grey!important;
+    
+}
+.itemUnavailable a {
+	cursor: default;   
+}
+
+.message h3{
+		 margin: 0 0 5px 0;													 
+}
+
+
+/* ICONS */
+
+.km-cal:after,
+.km-cal:before
+{
+    content: "\e089";
+}
+
+.km-justify:after,
+.km-justify:before
+{
+    content: "\e0f1";
+}
+
+.km-close:after,
+.km-close:before {
+    
+    content: "\e038";
+}
+
+.km-zone:after,
+.km-zone:before {
+    
+    content: "\e0ac";
+}
+
+.km-email:after,
+.km-email:before {
+    content: "\e099";
+    
+}
+
+.km-exclamation:after,
+.km-exclamation:before {
+    content: "\e0fa";
+}
+
+
+.km-flat .building-text a.km-button {
+    background:none!important;
+    border:none!important;
+    padding: .2em .1em;
+}
+
+
+ul.feedback_options {
+    margin: 10px;
+}
+
+/*try font awesome */
+.fa .km-icon:after,
+.fa .km-icon:before
+{
+    font: 1em/1em 'FontAwesome';
+}
+
+.fa {
+    /*font-family: helvetica;*/
+    font-family: Roboto,HelveticaNeue,sans-serif;
+}
+
+/*try twitter */
+.km-twitter:after,
+.km-twitter:before {
+  content: "\F099";
+}
+
+.km-facebook:after,
+.km-facebook:before {
+  content: "\F09a";
+}
+
+.km-:after,
+.km-question-circle:before {
+    content: "";
+}
+
+/* settings */
+
+ul#settingsOptions li.info {
+    font-size: 1em;
+    line-height: normal;
+    margin-left: 0.2rem;
+	margin-right: 0.2rem;
+    color:#2e5968;
+}
+
+/* change flat theme colors */
+/* UNI PurplePink */
+.km-flat .km-switch-handle,.km-flat .k-slider-selection,.km-flat .km-switch-background{
+
+    /*color: #00a1be;*/
+    color: #a84d97;
+}
+
+.km-flat .km-rowinsert,
+.km-flat .km-state-active,
+.km-flat .km-scroller-pull,
+.km-flat .k-slider-selection,
+.km-flat .km-touch-scrollbar,
+.km-flat .km-pages .km-current-page,
+.km-flat .k-slider .k-draghandle,
+.km-flat .k-slider .k-draghandle:hover,
+.km-flat .km-tabstrip .km-state-active,
+.km-flat .km-scroller-refresh.km-load-more,
+.km-flat .km-popup .k-state-hover,
+.km-flat .km-popup .k-state-focused,
+.km-flat .km-popup .k-state-selected,
+.km-flat .km-actionsheet > li > a:active,
+.km-flat .km-actionsheet > li > a:hover,
+.km-flat li.km-state-active .km-listview-link,
+.km-flat li.km-state-active .km-listview-label,
+.km-flat .km-listview-label input[type=radio]:checked,
+.km-flat .km-listview-label input[type=checkbox]:checked
+{
+    background: #a84d97;
+    /*background: #00a1be;*/
+}
+
+.km-flat .km-loader {
+    background:none;
+    
+}
+.km-flat .km-filter-wrap > input:focus
+{
+    /*border-color: #00a1be;*/
+    border-color: #a84d97;
+}
+/*homepage footer only */
+div#tabstrip-home .km-tabstrip .km-button {
+    background: #f4f4f4;
+    color: #4c5356;
+}
+div#tabstrip-home .km-tabstrip .km-state-active {
+    background: #f4f4f4;
+    /*color: #00a1be;*/
+    color: #a84d97;
+}
+
+
+/* ============================================================================= */
+
+/*NEWS & EVENTS & TWITTER */
+
+div.events-title,
+div.news-title,
+div.post-title,
+div.tweet-title {
+    margin: 0.6em 0.8em 0.2em 0.9em;
+    font-size: 1.3em;
+}
+
+div.event-item,
+div.news-item,
+div.tweet-item,
+div.post-item {
+    padding:0px;
+    margin:0px;
+    font-size:1em;
+}
+
+ul#pull-eventslistview li,
+ul#pull-newslistview li,
+ul#pull-twitterlistview li,
+ul#alertlistview li,
+ul#pull-friendfacelistview li {
+    padding: .4em .2em;
+    
+}
+
+div.news-item a,
+div.event-item a,
+div.tweet-item a,
+div.post-item a {
+    font-weight:normal;
+    text-decoration: none;
+}
+
+
+div.event-field,
+div.news-field
+ {
+    padding: 0.4em 0.6em;
+    font-size: 1em;
+}
+
+div.news-title {
+    padding: 1.2em 0.2em 0.4em 0.2em;
+    margin: 0;
+    font-size: 1.3em;
+}
+
+div#event-detail p,
+div#news-detail p {
+    
+    margin-left:0px;
+    margin-right:0px;
+}
+
+div.event-field-label,
+div.news-field-label {
+    border-bottom: 1px solid;
+    padding-bottom:2px;
+}
+
+div.event-field-data,
+div.news-field-data {
+    padding-top:2px;
+}
+
+div.event-category div.event-field-label,
+div.news-category div.news-field-label {
+    display:none;
+}
+
+div.event-category div.event-field-data,
+div.news-category div.news-field-data {
+    color: #F0F8FF;
+}
+
+div.event-item span.event-title,
+div.event-item span.event-date,
+div.news-item span.news-title,
+div.tweet-item span.tweet-title {
+    
+    padding-right: 16px;
+    display:block;
+}
+
+ul#pull-friendfacelistview,
+ul#pull-twitterlistview,
+ul#alertlistview {
+    background-color: #eee;
+	/*padding-top: 4px;*/
+    
+}
+
+ul#pull-friendfacelistview li,
+ul#pull-twitterlistview li,
+ul#alertlistview li {
+    background-color: #fff;
+	margin: 6px;    
+}
+
+div.post-item span.post-title {
+	padding-right: 16px;	    
+    font-weight:bold;
+}
+
+div.post-item span.post-text,
+div.post-item span.post-likes {
+	padding-right: 16px;	    
+    
+}
+
+div.post-item span.post-likes {
+    font-size:11px;
+    color:gray;
+    padding-top: 4px;
+	display: block;
+}
+
+div.post-header {
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 5px;
+    padding-bottom: 14px;
+}
+
+a.profile_image_link {
+    
+    margin-right: 8px;
+    float: left;
+    color: #3b5998;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+a.profile_link {
+    
+    color: #3b5998;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+span.post-time {
+    color: gray;
+	font-size:11px;
+}
+
+div.nameDate h5 {
+    margin:0px;
+}
+
+div.event-item a.event-link,
+div.news-item a.news-link,
+div.post-item a.post-link,
+div.tweet-item a.tweet-link {
+    padding-right:0;
+    margin-right:0;
+	    cursor: pointer;
+    /*margin-top: 0.5em!important;*/
+}
+
+div.tweet-item a.tweet-link {
+    /*margin-top: 0em!important;*/
+    
+}
+
+/* news/event image */
+
+#pull-eventslistview .event-image,
+#pull-newslistview .news-image {
+        width: 4em;
+        height: 4.4em;
+        margin: 0.5em 0;
+        border: 1px solid rgba(0,0,0,.2);
+        display: inline-block;
+        -webkit-background-size: auto 100%;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        -webkit-transform: translatez(0);
+        vertical-align: top;
+    }
+
+img.post-image {
+    
+    
+}
+div.letterboxed-image {
+    
+}
+#pull-friendfacelistview .post-image {
+    	/*width: 90%;*/
+        margin: 0.5em auto;
+        border: 1px solid rgba(0,0,0,.2);
+        /*-webkit-border-radius: 4em;*/
+        /*border-radius: 4em;
+        display: inline-block;*/
+        -webkit-background-size: auto 100%;
+        /*background-size: auto 100%;
+        background-repeat: no-repeat;
+        background-position: center center;*/
+        -webkit-transform: translatez(0);
+		display:block;
+    }
+
+#pull-eventslistview div.event-text,
+#pull-newslistview div.news-text {
+        display: inline-block;
+        margin: .5em;
+        font-size: 0.8em;
+        /*width: 12em;*/
+    	width: 74%;
+    }
+
+#pull-twitterlistview div.tweet-text,
+#pull-friendfacelistview div.post-text,
+#alertlistview div.tweet-text {
+        display: inline-block;
+        margin: .5em;
+        font-size: 0.8em;
+    padding-right: 2.2em;
+    }
+    
+    .km-android #hierarchical-listview .parent:after {
+        display: inline-block;
+        border-color: #ffffff;
+    }
+    .km-wp8 #hierarchical-listview .parent:after {
+        display: inline-block;
+        border-color: #000000;
+    }
+
+div.event-img img,
+div.news-img img {
+    margin:1em;
+    padding:0em;
+    border: 1px solid;
+    
+    display: block;
+        height: 230px;
+        -webkit-background-size: 100% auto;
+        background-size: 100% auto;
+        margin: 1em auto;
+    
+}
+
+.km-flat .km-detail {
+       border-style:none;
+    
 }

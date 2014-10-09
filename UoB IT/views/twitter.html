@@ -1,0 +1,16 @@
+<div data-role="view" data-title="Tweets" data-layout="main" data-model="APP.models.twitter">
+  <ul data-role="listview" data-style="inset" data-template="tweetsTemplate" data-bind="source: ds"></ul>
+</div>
+
+<!-- this is the template used by the listview. template items are automatically
+     wrapped in an <li> by Kendo UI Mobile -->
+<script type="text/x-kendo-template" id="tweetsTemplate">
+  <!--<a data-bind="click: alert">#: data.text #</a>-->
+    <div class="tweet-item">
+                <div class="tweet-text">
+                    <span class="tweet-title">#:data.text#</span><br/>
+        			<span class="tweet_hours">#:timeAgo(data.created_at, "twitter")#</span>
+                </div>
+        		<a class="tweet-link" onClick="window.open('http://www.twitter.com/#:data.user.screen_name#/status/#:data.id_str#', '_system')" data-role="detailbutton" data-style="detaildisclose"></a>
+        </div>
+</script>
